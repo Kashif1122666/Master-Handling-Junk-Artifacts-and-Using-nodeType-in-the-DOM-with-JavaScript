@@ -1,0 +1,33 @@
+chpater 61: The DOM: Junk artifacts and nodeType
+
+Previous Lecture (Qucik Recap)
+     The DOM : finding children 
+         children : Return only child elements (actual html elements like h1, p , span , div etc)
+         childNodes : Return all child nodes , including text nodes , comments , etc.
+
+    what are Junk artifacts     
+       when working  with the DOM , especially when iterating through child nodes , we may
+       encounter nodes that are not elements . These are often refferred to as "Junk artifacts"
+
+       COMMON JUNK ARTIFACTS:
+          Text nodes: These are created by spaces, line breaks , or text content within the html. 
+          comment Nodes : Nodes created by HTML comments.
+
+    Practicle Example:       
+        Junk-artifacts.html
+
+    explaination:
+       Elements Nodes : Represented by actual HTML tags like <p> or <span>.
+       Text Nodes : Represented by text or spaces between elements.
+       comment nodes : Represented by HTML comments.
+
+WHAT is nodeType property?       
+    The nodeType property Returs the node type , as a number , of the specified node.
+
+    if the node is an element node, the nodeType property will Return 1.
+    if the node is an attribute node, the nodeType property will Return 2.
+    if the node is an text node, the nodeType property will Return 3.
+    if the node is an comment node, the nodeType property will Return 8.
+    This property is read-only.
+
+   
